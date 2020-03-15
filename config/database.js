@@ -66,7 +66,7 @@ module.exports = {
   | Here we define connection settings for PostgreSQL database.
   |
   | npm i --save pg
-  |
+  | usando o ElephantSQL
   */
   pg: {
     client: 'pg',
