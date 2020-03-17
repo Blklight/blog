@@ -17,4 +17,4 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
-Route.get('/articles', 'ArticleController.index')
+Route.resource('articles', 'ArticleController').apiOnly()

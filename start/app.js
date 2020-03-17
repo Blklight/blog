@@ -14,11 +14,13 @@ const providers = [
   '@adonisjs/framework/providers/AppProvider',
   '@adonisjs/framework/providers/ViewProvider',
   '@adonisjs/lucid/providers/LucidProvider',
+  '@adonisjs/lucid-slugify/providers/SlugifyProvider',
   '@adonisjs/bodyparser/providers/BodyParserProvider',
   '@adonisjs/cors/providers/CorsProvider',
   '@adonisjs/shield/providers/ShieldProvider',
   '@adonisjs/session/providers/SessionProvider',
-  '@adonisjs/auth/providers/AuthProvider'
+  '@adonisjs/auth/providers/AuthProvider',
+  '@adonisjs/validator/providers/ValidatorProvider'
 ]
 
 /*
