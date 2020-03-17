@@ -3,8 +3,6 @@
 const Article = use('App/Models/Article')
 const { validate } = use('Validator')
 const Tag = use('App/Models/Tag')
-
-
 class ArticleController {
   async index({ response }) {
     // response.json(await Article.all())
