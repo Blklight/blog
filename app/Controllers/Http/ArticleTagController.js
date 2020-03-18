@@ -37,6 +37,21 @@ class ArticleTagController {
     )
   }
 
+  async show({ params, response }){
+
+    const articleId = Number(params.id)
+
+    const article = await Article.find(articleId)
+
+    if(!article) {
+      response.badRequest()
+      return
+    }
+
+    const tags = await article.tags().fetch()
+
+    response.status(200).send(tags)
+  }
 
   async delete({ params, response }) {
 

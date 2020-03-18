@@ -113,18 +113,18 @@ class ArticleController {
     response.noContent({})
   }
 
-  async createTag({ response }) {
-    // const id = Number(params.id)
-    const post = await Article.last()
+  // async createTag({ response }) {
+  //   // const id = Number(params.id)
+  //   const article = await Article.last()
 
-    if(!post) {
-      response.notFound({
-        error: 'Not Found'
-      })
-      return
-    }
-    response.json(post)
-  }
+  //   if(!article) {
+  //     response.notFound({
+  //       error: 'Not Found'
+  //     })
+  //     return
+  //   }
+  //   response.json(article)
+  // }
 
 
 }
