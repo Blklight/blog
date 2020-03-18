@@ -112,6 +112,21 @@ class ArticleController {
     //retornar nada com o código no Content
     response.noContent({})
   }
+
+  async createTag({ response }) {
+    // const id = Number(params.id)
+    const post = await Article.last()
+
+    if(!post) {
+      response.notFound({
+        error: 'Not Found'
+      })
+      return
+    }
+    response.json(post)
+  }
+
+
 }
 
 module.exports = ArticleController
