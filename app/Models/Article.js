@@ -14,6 +14,12 @@ class Article extends Model {
       strategy: 'dbIncrement'
     })
   }
+
+  tags() {
+    return this
+      .belongsToMany('App/Models/Tag')
+      .pivotModel('App/Models/ArticleTag')
+  }
 }
 
 module.exports = Article

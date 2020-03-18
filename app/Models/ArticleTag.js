@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class ArticleTag extends Model {
+  static get table () {
+    return "articles_tags"
+  }
 }
 
 module.exports = ArticleTag
