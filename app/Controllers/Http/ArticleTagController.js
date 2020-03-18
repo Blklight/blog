@@ -38,16 +38,22 @@ class ArticleTagController {
   }
 
 
-  // async delete({ params, response }) {
-    
-  //   const articleId = Number(params.id)
-  //   const tagId = Number(params.tagId)
+  async delete({ params, response }) {
 
-  //   const article = await Article.find(articleId)
-  //   const tag = await Tag.find(tagId)
+    const articleId = Number(params.id)
+    const tagId = Number(params.tagId)
 
+    const article = await Article.find(articleId)
+    const tag = await Tag.find(tagId)
 
-  // }
+    const hasArticleTag = await ArticleTag
+    .query()
+    .where('article_id', articleId)
+    .where('tag_id', tagId)
+    .first()
+
+    response.status(200).send(hasArticleTag.delete())
+  }
 
 }
 
