@@ -21,4 +21,14 @@ Route.resource('articles', 'ArticleController').apiOnly()
 Route.resource('tags', 'TagController').apiOnly()
 Route.get('/articles/:id/tags', 'ArticleTagController.show')
 Route.post('/articles/:id/tags/:tagId', 'ArticleTagController.store')
-Route.delete('/articles/:id/tags-delete/:tagId', 'ArticleTagController.delete')
+Route.delete('/articles/:id/tags/:tagId', 'ArticleTagController.delete')
+
+/*Routes de usuário.*/
+
+Route.post('create', 'UserController.store')
+Route
+  .post('login', 'UserController.login')
+  .middleware('guest')
+Route
+  .get('users/:id', 'UserController.show')
+  .middleware('auth')

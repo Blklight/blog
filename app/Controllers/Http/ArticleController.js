@@ -45,9 +45,6 @@ class ArticleController {
     article.title = newArticleData.title
     article.body = newArticleData.body
 
-    // const tag = new Tag()
-    // tag.tag
-
     await article.save()
 
     //retorna o novo article
@@ -112,21 +109,6 @@ class ArticleController {
     //retornar nada com o código no Content
     response.noContent({})
   }
-
-  // async createTag({ response }) {
-  //   // const id = Number(params.id)
-  //   const article = await Article.last()
-
-  //   if(!article) {
-  //     response.notFound({
-  //       error: 'Not Found'
-  //     })
-  //     return
-  //   }
-  //   response.json(article)
-  // }
-
-
 }
 
 module.exports = ArticleController

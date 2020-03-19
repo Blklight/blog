@@ -10,7 +10,6 @@ class ArticleTagController {
   async store({ params, response }){
 
     const articleId = Number(params.id)
-
     const tagId = Number(params.tagId)
 
     const article = await Article.find(articleId)
@@ -40,7 +39,6 @@ class ArticleTagController {
   async show({ params, response }){
 
     const articleId = Number(params.id)
-
     const article = await Article.find(articleId)
 
     if(!article) {
@@ -52,6 +50,7 @@ class ArticleTagController {
 
     response.status(200).send(tags)
   }
+
 
   async delete({ params, response }) {
 
@@ -72,4 +71,4 @@ class ArticleTagController {
 
 }
 
-module.exports = ArticleTagController
+hmodule.exports = ArticleTagController
