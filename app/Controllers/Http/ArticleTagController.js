@@ -71,4 +71,4 @@ class ArticleTagController {
 
 }
 
-hmodule.exports = ArticleTagController
+module.exports = ArticleTagController
